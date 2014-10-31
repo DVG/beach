@@ -10,6 +10,10 @@ require "./slack_bot"
 require "./slack_params"
 require "./services/base_service"
 
+get "/" do
+  "Hello"
+end
+
 post "/gif" do
   slack_params = SlackParams.new(params)
   slack_service = GifService.new(slack_params)
